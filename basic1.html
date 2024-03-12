@@ -1,0 +1,105 @@
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auto Image Slider</title>
+<style>
+  .slider {
+    width: 100%;
+    overflow: hidden;
+  }
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  .slide {
+    min-width: 100%;
+    flex: 1;
+  }
+  .main {
+  float: left;
+  /*width: 60%;The width is 60%, by default */
+  }
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  }
+  body{
+  background-color: whitesmoke
+  }
+  header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }     
+        nav {
+            display: inline-block;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        p:first-letter {
+            font-size: 2em; /* Adjust the font size as needed */
+            text-transform: uppercase;
+        }
+</style>
+</head>
+<body>
+  <h1 style="font-family: cursive;text-align: center;color: brown;">Rare Beauty</h1>
+  <header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="https://www.rarebeauty.com/">Explore</a>
+        <a href="https://www.rarebeauty.com/pages/contact">Contact Us</a>
+    </nav>
+</header>
+<div class="slider center">
+  <div class="slides">
+    <div class="slide"><img src="https://www.refinery29.com/images/10913338.jpg?format=webp&width=720&height=900&quality=85"></div>
+    <div class="slide"><img src="https://cdn.shopify.com/s/files/1/0314/1143/7703/products/Full-Size-Mascara-Open-SKU_540x.jpg?v=1629247163" ></div>
+    <div class="slide"><img src="https://cdn.shopify.com/s/files/1/0314/1143/7703/products/pdp-sku-Liquid-Blush-Dewy-Hope_540x.jpg?v=1645133400"></div>
+    <div class="slide"><img src="https://cdn.shopify.com/s/files/1/0314/1143/7703/products/soft-pinch-tinted-lip-oil-hope-1440x1952_540x.jpg?v=1679094432"></div>
+    <div class="slide"><img src="https://cdn.shopify.com/s/files/1/0314/1143/7703/products/Bronzer-Stick-Power-Boost-SKU_540x.jpg?v=1638297308"></div>
+    <div class="slide"><img src="https://cdn.shopify.com/s/files/1/0314/1143/7703/files/all-of-the-above-eyeshadow-stick-well-being-1440x1952_540x.jpg?v=1687404502"></div>
+    <div class="slide"><img src="https://cdn.shopify.com/s/files/1/0314/1143/7703/products/kind-words-matte-lip-liner-humble-open_540x.jpg?v=1655865516"></div>
+    <div class="slide"><img src="https://cdn.shopify.com/s/files/1/0314/1143/7703/products/positive-light-under-eye-brightener-light-1440x1952_540x.jpg?v=1670453665"></div>
+    <div class="slide"><img src="https://cdn.shopify.com/s/files/1/0314/1143/7703/files/find-comfort-hand-cream-closed-1440x1952_540x.jpg?v=1701822253"></div>
+    <div class="slide"><img src="https://cdn.shopify.com/s/files/1/0314/1143/7703/files/Melting-Blush-NearlyNeutral-SKU-allure_540x.jpg?v=1697230800"></div> 
+    <div class="slide"><img src="https://cdn.shopify.com/s/files/1/0314/1143/7703/products/kind-words-matte-lipstick-talented_540x.jpg?v=1655864623"></div>
+    <div class="slide"><img src="https://cdn.shopify.com/s/files/1/0314/1143/7703/products/PUFFY-MAKEUP-BAG-1_540x.jpg?v=1598641651"></div>
+</div>
+</div>
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+  function nextSlide() {
+    if (currentSlide === totalSlides - 1) {
+      currentSlide = 0;
+    } else {
+      currentSlide++;
+    }
+    updateSlide();
+  }
+  function updateSlide() {
+    const slideWidth = slides[0].clientWidth;
+    document.querySelector('.slides').style.transform = `translateX(${-currentSlide * slideWidth}px)`;
+  }
+  setInterval(nextSlide, 3000); // Change slide every 3 seconds
+</script>
+<p style="text-align: center;color:maroon;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: medium;"><strong>Selena Gomez</strong> here!!!! my products  has gained popularity for its inclusive approach to beauty and its commitment to promoting mental health awareness. Rare Beauty offers a range of makeup products designed to enhance natural beauty and celebrate individuality.One of the standout products from Rare Beauty is its Liquid Touch Weightless Foundation. This foundation is praised for its lightweight formula that provides buildable coverage, leaving a natural, radiant finish. It comes in a wide range of shades to suit diverse skin tones, ensuring that everyone can find their perfect match.Rare Beauty also offers a variety of lip products, including the Lip Souffle Matte Cream Lipstick and the Lip Balm. The Lip Souffle Matte Cream Lipstick provides a comfortable, velvety matte finish without feeling dry or cakey. Meanwhile, the Lip Balm hydrates and nourishes the lips, leaving them feeling soft and smooth.In addition to its high-quality makeup products, Rare Beauty is committed to making a positive impact. A portion of every purchase goes towards the Rare Impact Fund, which aims to increase access to mental health services and support for underserved communities.</p>
+<footer style="text-align: center;">
+  <u><p>&copy; 2024 R@RE BE@UTY. All rights reserved.</p></u>
+</footer>
+</body>
+</html>
